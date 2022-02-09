@@ -1,0 +1,15 @@
+def printFormation(longestRow: int) -> str:
+formation = ''
+logost_row= longestRow
+for i in range(logost_row):
+formation += str((i+1)) *logost_row
+logost_row -= 1
+logost_row = longestRow + 1
+i = 2
+while(i <= longestRow):
+formation += str(logost_row) * i
+logost_row += 1
+i = i +1
+return formation
+
+print(printFormation(5))
